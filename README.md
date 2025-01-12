@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+## Electric Vehicle Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project visualizes electric vehicle data using interactive charts. The dashboard includes insights like vehicle distribution by manufacturer, model, and year, as well as type distribution.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+- **Interactive Bar Charts**: View the distribution of electric vehicles by manufacturer and year.
+- **Pie Charts**: Analyze the distribution of vehicle types and models.
+- **Responsive Design**: The charts adjust seamlessly to different screen sizes.
+- **Loading Spinner**: Displays a spinner while the data is being fetched and processed.
 
-### `npm start`
+### Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Core framework for building the user interface.
+- **Recharts**: Charting library for creating interactive charts.
+- **Papaparse**: CSV parsing library to process large datasets efficiently.
+- **Material-UI**: For styling and components like the loading spinner.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Getting Started
 
-### `npm test`
+#### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have the following installed:
 
-### `npm run build`
+- Node.js (v14 or above)
+- npm (v6 or above) or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Hrishikesh-Korhale/Analytics-Dashboard-Assessment-main
+    cd electric-vehicle-dashboard
+    ```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a `.env` file in the root directory and specify the path to the CSV file:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    REACT_APP_CSV_FILE_PATH=path/to/your/data.csv
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server:
 
-## Learn More
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The dashboard will be accessible at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### File Structure
 
-### Code Splitting
+```bash
+src/
+├── components/
+│   ├── Dashboard.js      # Main dashboard component
+│   ├── Chart.js          # Reusable chart component
+├── styles/
+│   ├── dashboard.css     # Custom styles
+├── App.js                # Entry point
+├── index.js              # React DOM rendering
+public/
+├── index.html            # HTML template
+.env                      # Environment variables
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Usage
 
-### Analyzing the Bundle Size
+The dashboard displays insights about electric vehicles:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Bar Chart**: Vehicle distribution by manufacturer.
+- **Pie Chart**: Vehicle type and model distribution.
+- **Yearly Trends**: Number of vehicles by year.
 
-### Making a Progressive Web App
+Interact with charts by hovering over sections to see detailed tooltips.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Troubleshooting
 
-### Advanced Configuration
+- **Chart Not Displaying Properly**: Ensure the CSV file is correctly formatted and matches the expected structure.
+- **Dependency Errors**: Run `npm install` or `yarn install` to ensure all dependencies are installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
